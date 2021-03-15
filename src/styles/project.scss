@@ -1,0 +1,102 @@
+.project-intro {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+
+  .project-meta {
+    position: relative;
+    position: absolute;
+    // a way to center things: place at top 50% but then it is the topmost
+    // border, so we translate the whole thing by half of its height
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 50px;
+    width: 200px;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+// https://css-tricks.com/snippets/css/complete-guide-grid/
+.project-media {
+  padding: 50px;
+  z-index: 1;
+
+  //do not make it overlap the .project-meta
+  figure.intro {
+    margin: 0;
+    padding-right: 200px;
+    height: 100vh;
+
+    //center the image vertically
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  iframe {
+    padding-top: 20px;
+  }
+}
+
+.project-media-grid {
+  //this is xs -> xl but is overriden by media queries below
+  //no grid or do your own
+  img {
+    margin-bottom: 15px;
+  }
+
+  //bootstrap magic ( including md breakpoint -> xl)
+  @include media-breakpoint-up(md) {
+    img {
+      //override xs -> md
+      margin-bottom: 0;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 150px 150px 200px 150px 150px;
+    gap: 20px 20px;
+
+    grid-template-areas:
+    "first . ."
+    "first third third"
+    "second third third"
+    "fourth fourth fifth"
+    "fourth fourth fifth"
+    "fourth fourth .";
+  }
+
+  // watch for correct alignment in grid cells (large screens)
+  // default is top left
+  .first {
+    grid-area: first;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  .second {
+    grid-area: second;
+    justify-self: flex-end;
+  }
+  .third {
+    grid-area: third;
+    align-self: flex-end;
+  }
+  .fourth {
+    grid-area: fourth;
+  }
+  .fifth {
+    grid-area: fifth;
+  }
+}

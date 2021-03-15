@@ -22,6 +22,11 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/project.html'),
+      filename: 'project.html',
     }),
   ],
   resolve: {
@@ -42,6 +47,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
+            publicPath: './',
           },
         },
       },

@@ -1,0 +1,7 @@
+// import only the bootstrap styles you need!
+// have a look at node_modules/bootstrap/scss and
+// https://getbootstrap.com/docs/5.0/customize/sass/
+@import "bootstrap/scss/bootstrap-grid";
+
+// went to that folder and searched for embed:
+@import "bootstrap/scss/utilities/embed";

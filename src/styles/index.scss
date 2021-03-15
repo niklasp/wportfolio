@@ -1,6 +1,6 @@
-$body-color: slateblue;
+@import "bootstrap";
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
-}
+@import "main";
+@import "fonts";
+@import "front";
+@import "project";

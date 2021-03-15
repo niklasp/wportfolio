@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>webpack starterkit</title>
+</head>
+<body>
+  <!-- das nav kann in dein header template wuerde ich sagen ? -->
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="/"> zurück</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="project-intro">
+    <div class="project-meta">
+      <h1 class="project-title">Hysterikon</h1>
+      <div class="project-description">
+        Hysterikon ist ein experimentelles Pop-up-Buch. Ursprünglich von der Autorin Ingrid Lausund für die Bühne geschrieben, versucht dieses Werk stattdessen, das Stück (Szene 5) zwischen den Seiten dieses Buches zu inszenieren. Da sich die Szene vordergründig um die Frage dreht, welche Seife die Figur kaufen sollte, gibt es eine passende Seifen-IPod. Auf ihm ist der gesprochene Text des Stückes zu hören. Und so funktioniert es: <br> Sie stecken die Kopfhörer ein und blättern, während das Stück hörbar ist, durch die Seiten und die Pop-up-Elemente und sehen, wie sich das Stück vor Ihren Augen entfaltet. Auf diese Weise wird die Geschichte zum Leben erweckt.
+      </div>
+    </div>
+    <div class="info">
+      <!-- you can use spans here or just <b>-->
+      <b>Pop-up-Buch</b> 15 x 23 cm <br>
+      faltet sich auf 28 x 46 cm <br>
+      <b>Audioaufnahme</b> Ipod aus Seife<br>
+    </div>
+  </section>
+  
+  <section class="project-media">
+    <!-- just a container because we need it -->
+    <figure class="intro">
+      <img src="./images/Hysterikon_frei.png" alt="mainImage">
+    </figure>
+
+    <div class="project-media-grid">
+      <img class="first" data-zoomable src="./images/Hysterikon_3.png" alt="video_1">
+      <img class="second" src="./images/Hysterikon_5.png" alt="video_2">
+      <img class="third" src="./images/Hysterikon_2.png" alt="video_3">
+      <img class="fourth" src="./images/Hysterikon_4.png" alt="video_4">
+      <img class="fifth" src="./images/Hysterikon_1.png" alt="video_5">
+    </div>
+
+    <!--  see https://getbootstrap.com/docs/4.0/utilities/embed/ -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe src="https://player.vimeo.com/video/362238880?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+</body>
+</html>
