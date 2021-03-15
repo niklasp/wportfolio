@@ -1,4 +1,4 @@
-import mediumZoom from 'medium-zoom'
+import mediumZoom from 'medium-zoom';
 
 import '../styles/index.scss';
 
